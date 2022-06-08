@@ -1,8 +1,11 @@
 import 'package:batora/checkbox.dart';
 import 'package:batora/checkbox1.dart';
 import 'package:batora/contoh1.dart';
+import 'package:batora/dasboard.dart';
 import 'package:batora/login.dart';
 import 'package:flutter/material.dart';
+import 'dart:io';
+import 'dart:html';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +23,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: checkbox1());
+        home: dasboard());
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:crypto_font_icons/crypto_font_icons.dart';
 
 class login extends StatelessWidget {
   const login({Key? key}) : super(key: key);
@@ -6,13 +7,44 @@ class login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.all(5),
-        decoration:
-            BoxDecoration(borderRadius: BorderRadius.circular(19), boxShadow: [
-          BoxShadow(
-              color: Color.fromARGB(136, 105, 90, 90),
-              offset: Offset(0, -5),
-              blurRadius: 10.0)
-        ]));
+      padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+      height: 200,
+      width: double.maxFinite,
+      child: Card(
+        elevation: 5,
+        child: Padding(
+          padding: EdgeInsets.all(7),
+          child: Stack(children: <Widget>[
+            Align(
+              alignment: Alignment.centerRight,
+              child: Stack(
+                children: <Widget>[
+                  Padding(
+                      padding: const EdgeInsets.only(left: 10, top: 5),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15.0),
+                                child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Icon(
+                                      CryptoFontIcons.BTC,
+                                      color: Colors.amber,
+                                      size: 40,
+                                    )),
+                              )
+                            ],
+                          )
+                        ],
+                      ))
+                ],
+              ),
+            )
+          ]),
+        ),
+      ),
+    );
   }
 }
